@@ -1,0 +1,8 @@
+[package]
+name = "exp-yew"
+version = "0.1.0"
+edition = "2021"
+repository = "https://github.com/fitzypop/exp-yew"
+
+[dependencies]
+yew = { git = "https://github.com/yewstack/yew/", features = ["csr"] }
