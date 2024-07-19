@@ -1,4 +1,5 @@
 use yew::prelude::*;
+use yew_router::prelude::*;
 
 #[function_component]
 fn Navbar() -> Html {
@@ -6,8 +7,8 @@ fn Navbar() -> Html {
     <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
         <div class="container">
             <div class="navbar-brand">
-                <a class="navbar-item" href="#">
-                    <strong>{"My Blog"}</strong>
+                <a class="navbar-item" href="/">
+                    <strong>{"My Yew Site"}</strong>
                 </a>
                 <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
                     <span aria-hidden="true"></span>
@@ -17,13 +18,11 @@ fn Navbar() -> Html {
             </div>
             <div id="navbarMenu" class="navbar-menu">
                 <div class="navbar-start">
-                    <a class="navbar-item" href="#">{"Home"}</a>
-                    <a class="navbar-item" href="#">{"About"}</a>
-                    <a class="navbar-item" href="#">{"Blog"}</a>
+                    <a class="navbar-item" href="/">{"Home"}</a>
+                    <a class="navbar-item" href="/contact">{"Contact"}</a>
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link">{"More"}</a>
                         <div class="navbar-dropdown">
-                            <a class="navbar-item" href="#">{"Contact"}</a>
                             <a class="navbar-item" href="#">{"Careers"}</a>
                             <hr class="navbar-divider" />
                             <a class="navbar-item" href="#">{"Report an issue"}</a>
@@ -45,7 +44,7 @@ fn Navbar() -> Html {
 }
 
 #[function_component]
-fn App() -> Html {
+fn Home() -> Html {
     let counter = use_state(|| 0);
     let onclick = {
         let counter = counter.clone();
@@ -75,6 +74,37 @@ fn App() -> Html {
             </div>
         </section>
     </div>
+    }
+}
+
+#[function_component]
+fn Contact() -> Html {
+    html! {
+    <div>
+        <Navbar />
+        {"Under Construction"}
+    </div>
+    }
+}
+
+#[derive(Clone, Routable, PartialEq)]
+enum Route {
+    #[at("/")]
+    Home,
+    #[at("/contact")]
+    Contact,
+}
+
+#[function_component]
+fn App() -> Html {
+    html! {
+        <BrowserRouter>
+            <Switch<Route> render={move |routes: Route| {
+                match routes {
+                    Route::Home => html! { <Home /> },
+                    Route::Contact => html! { <Contact /> },
+                }}} />
+        </BrowserRouter>
     }
 }
 
