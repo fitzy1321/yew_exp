@@ -26,7 +26,7 @@ And to build a release version: `just release`
 
 All recipes are in `justfile`.
 
-All these tasks (currently) use `trunk` "under the hood".
+All these tasks (currently) use [`trunk`](https://trunkrs.dev/) "under the hood".
 
 ## References
 
