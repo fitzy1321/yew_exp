@@ -1,2 +1,2 @@
 default:
-    trunk serve --open
+    trunk serve -M --open

@@ -66,7 +66,7 @@ fn App() -> Html {
 
                 <div class="columns is-centered">
                     <div class="column has-text-centered">
-                        <button class="button is-primary" {onclick}>{ "+1" }</button>
+                        <button class="button is-primary is-outlined" {onclick}>{ "+1" }</button>
                     </div>
                     <div class="column has-text-centered">
                         <p class="has-text-white is-5">{ *counter }</p>
