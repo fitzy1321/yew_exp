@@ -1,4 +1,8 @@
-# Build steps
+# Experiment Yew
+
+What is it like, making a web app with [yew.rs](https://yew.rs)
+
+## Setup
 
 ```sh
 rustup target add wasm32-unknown-unknown
