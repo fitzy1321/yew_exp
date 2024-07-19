@@ -13,6 +13,7 @@ What is it like, making a web app with [yew.rs](https://yew.rs)
 rustup target add wasm32-unknown-unknown
 cargo install trunk wasm-bindgen-cli
 ```
+
 ## Run locally
 
 Make sure everything above is done first ☝️.
