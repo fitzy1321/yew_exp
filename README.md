@@ -11,7 +11,7 @@ What is it like, making a web app with [yew.rs](https://yew.rs)
 
 ```sh
 rustup target add wasm32-unknown-unknown
-cargo install trunk wasm-bindgen-cli
+cargo install trunk
 ```
 
 ## Run locally
