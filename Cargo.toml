@@ -1,5 +1,5 @@
 [package]
-authors = ["fitzypop fitzypop@pm.me"]
+authors = ["fitzypop <fitzypop@pm.me>"]
 categories = ["web app", "wasm", "yew"]
 description = "My Yew Playground"
 edition = "2021"
