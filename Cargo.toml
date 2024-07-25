@@ -4,9 +4,9 @@ categories = ["web app", "wasm", "yew"]
 description = "My Yew Playground"
 edition = "2021"
 license = "Unlicense"
-name = "yew.exp"
+name = "yew_exp"
 readme = "./README.md"
-repository = "https://github.com/fitzypop/yew.exp"
+repository = "https://github.com/fitzypop/yew_exp"
 version = "0.1.0"
 
 [dependencies]
